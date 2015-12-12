@@ -1,15 +1,15 @@
 
 //Jquery
-//prepros-prepend jquery-1-10-2.min.js
+//@prepros-prepend jquery-1-10-2.min.js
 
 //Slidebars
-//prepros-prepend ../plugins/slidebars/slidebars.js
+//@prepros-prepend ../plugins/slidebars/slidebars.js
 
 //Knockout
-//prepros-prepend knockout-3.3.0.js
+//@prepros-prepend knockout-3.3.0.js
 
 //Utils
-//prepros-prepend utils.js
+//@prepros-prepend utils.js
 
 
 
