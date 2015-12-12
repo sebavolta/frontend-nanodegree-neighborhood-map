@@ -19,11 +19,9 @@ var init = function(storedLocations){
 
 	/*Generates the Location object*/
 	var Location = function(data, index){
-
 		this.title = data.title;
 		this.latLng = new google.maps.LatLng(data.latLng[0].lat,data.latLng[0].lng);
 		this.images = data.images;
-		//this.url =  data.url;
 		this.visible = true;
 		this.activated = ko.observable(false);
 		this.index = index;
@@ -32,8 +30,17 @@ var init = function(storedLocations){
 	var ViewModel = function() {
 		var self = this;
 
+		//Hides the loading wheel
 		this.hideLoading = ko.observable(true);
 
+		/*Sets the Error message in false to hide it*/
+		this.showError = ko.observable(false);
+
+		/*Checks the 'storedLocations' received in the init function
+		if the data is empty then shows the error message*/
+		if(storedLocations.length < 1){
+			self.showError(true);
+		}
 
 		//Creates a new observable array for locations
 		this.locationsList = ko.observableArray([]);
@@ -52,10 +59,10 @@ var init = function(storedLocations){
 			self.showInfoWindow(index);
 		}
 
-		//The input filed value
+		//The input filter value
 		this.filterTxt = ko.observable();
 
-
+		/*Filters the locations list*/
 		this.filterLocation = ko.computed(function () {
 			if (self.filterTxt() !=undefined) {
 				return this.locationsList().filter(function (location) {
@@ -87,7 +94,6 @@ var init = function(storedLocations){
 				map: self.map,
 				position: location.latLng,
 				title : location.title,
-				//url : location.url,
 				images: location.images,
 				animation: google.maps.Animation.DROP,
 				index: index
@@ -102,7 +108,7 @@ var init = function(storedLocations){
 			var imgs = '';
 
 			//log(marker.images)
-			//Itearates marker images and prepare the markup
+			//Itearates marker images to get the url and prepare the markup
 			for (i = 0; i< marker.images.images.length; i++){
 				imgs += '<a target="_blank" href="'+marker.images.links[i]+'"><img class="marker-image" src="'+marker.images.images[i]+'"></a>';
 			}
@@ -160,14 +166,6 @@ var init = function(storedLocations){
 				})
 			}
 		};
-
-	
-	//Logs Latitud and Longitude when clicking in the map	
-	/*google.maps.event.addListener(this.map, 'click', function(e) {
-		console.log( "Latitude: "+e.latLng.lat()+" "+", longitude: "+e.latLng.lng() ); 
-	});*/
-		
-
 	}
 
 	ko.applyBindings(new ViewModel(), document.getElementById('body'));

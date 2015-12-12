@@ -24,18 +24,15 @@ var ready = function() {
 		mySlidebars.slidebars.toggle('left');
 	});
 
-
 	/*Get the json data*/
 	$.getJSON("data/locations.json", function(data) { 
-		// Now use this data to update your view models, 
-		// and Knockout will update your UI automatically 
 		mainData(data);
 	})
 	.done(function() {
 		log( "second success" );
 	})
 	.fail(function() {
-		log( "error" );
+		log( "error loading local json" );
 	})
 	.always(function() {
 		log( "complete" );
@@ -66,11 +63,10 @@ var runStoredUrl = function(index){
 /*Calls ajax to obtain flickr json info. When the info is completely loaded,
 it calls the 'runStoredUrl' function again increasing the index*/
 var callAjax = function(url,index) {
+	
 	/*Get the json data*/
 	$.getJSON(url, function(data) { 
-		// Now use this data to update your view models, 
-		// and Knockout will update your UI automatically 
-		
+		//    
 	})
 	.done(function(data) {
 		log( "second success" );
@@ -79,7 +75,7 @@ var callAjax = function(url,index) {
 	})
 	.fail(function() {
 		log( "error loading flickr" );
-
+		sendEmpty();
 	})
 	.always(function() {
 		log( "complete" );
@@ -100,7 +96,6 @@ var externalData = function(data){
 /*Mix local and externl Data, into a 'storedLocations' array by 
 setting the 'images' values on each location's data*/
 var mixData = function(){
-	log(storedLocations.title)
 	storedLocations.forEach(function(location, i){
 		var myImages = {
 			images: [],
@@ -119,13 +114,15 @@ var mixData = function(){
 		/*When all data is completed, lets call the 'init' function 
 		to start working on the Model*/
 		if(i == storedLocations.length - 1){
-			log('ready to run')
+			//log('ready to run')
 			init(storedLocations);
 		}
 	});
 }
 
-
-
-
-
+/*Sends an empy array to the init function 
+to show the error message. This happens
+in case of an error in the ajax loading*/
+var sendEmpty = function() {
+	init(new Array());
+}

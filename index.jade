@@ -16,6 +16,7 @@ html
 		#sb-site
 			.loading(data-bind='css: { hideLoading: hideLoading }')
 				img.load-gif(src="img/loading.gif")
+			.error(data-bind='css: { showError: showError }') Error loading data, please try again...
 			.content-header
 				button.toggle-left MENU
 			.content-body

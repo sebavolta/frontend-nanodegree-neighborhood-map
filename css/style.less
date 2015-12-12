@@ -11,6 +11,7 @@ i.e. you can use 'width: value' as '.w(value)*/
 html, 
 body {
 	.w(100%); .h(100%);
+	overflow: hidden;
 }
 
 * {
@@ -87,10 +88,29 @@ body {
 	top: 50%;
 	.font(20px);
 	z-index: 99999;
+	.m(-20px 0 0 -20px);
 	.load-gif {
 		.w(40px); .h(40px);
 	}
 	&.hideLoading {
 		display: none;
+	}
+}
+
+.error {
+	display: none;
+	.absolute;
+	left: 50%;
+	top: 50%;
+	.font(20px);
+	z-index: 99999;
+	.m(-50px 0 0 -148px);
+	.font(15px);
+	.p(25px 20px);
+	background: @second-color;
+	border-radius: 5px;
+	color: white;
+	&.showError {
+		display: block;
 	}
 }

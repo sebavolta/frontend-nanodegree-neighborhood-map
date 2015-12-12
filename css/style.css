@@ -102,6 +102,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 * {
   font-family: 'Open Sans';
@@ -171,6 +172,7 @@ body {
   top: 50%;
   font-size: 20px;
   z-index: 99999;
+  margin: -20px 0 0 -20px;
 }
 .loading .load-gif {
   width: 40px;
@@ -178,4 +180,21 @@ body {
 }
 .loading.hideLoading {
   display: none;
+}
+.error {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 20px;
+  z-index: 99999;
+  margin: -50px 0 0 -148px;
+  font-size: 15px;
+  padding: 25px 20px;
+  background: #da881e;
+  border-radius: 5px;
+  color: white;
+}
+.error.showError {
+  display: block;
 }
