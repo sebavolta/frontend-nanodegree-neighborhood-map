@@ -1,0 +1,68 @@
+{
+    "locations": [
+        {
+            "title": "Vatican City",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=vatican%20city&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90270824634473",
+                "lng":"12.45774507522583"
+            }]
+        },
+        {
+            "title": "Sistine Chapel",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=sistine%20chapel&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90301567803266",
+                "lng":"12.45448350906372"
+            }]
+        },
+        {
+            "title": "St. Peter's Basilica",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=St.%20Peter%27s%20Basilica&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90216125383766",
+                "lng":"12.454048991203308"
+            }]
+        },
+        {
+            "title": "Vatican Museums",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=Vatican%20Museums&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90664485711511",
+                "lng":"12.45375394821167"
+            }]
+        },
+        {
+            "title": "St. Peter's Square",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=St.%20Peters%20Square&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90225508135248",
+                "lng":"12.456795573234558"
+            }]
+        },
+        {
+            "title": "Vatican Library",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=Vatican%20Library&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90476042463784",
+                "lng":"12.454816102981567"
+            }]
+        },
+        {
+            "title": "Apostolic Palace",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=Apostolic%20Palace&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.90352872631935",
+                "lng":"12.456210851669312"
+            }]
+        },
+        {
+            "title": "St. Peter's Tomb",
+            "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=Saint%20Peters%20tomb&format=json&jsoncallback=?",
+            "latLng": [{
+                "lat":"41.902558522584116 ",
+                "lng":"12.453807592391968"
+            }]
+        }
+    ]
+}

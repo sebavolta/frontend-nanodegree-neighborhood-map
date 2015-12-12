@@ -1,0 +1,96 @@
+/*Imports general css rules and less functions,
+i.e. you can use 'width: value' as '.w(value)*/
+@import 'general';
+
+/*VARS*/
+@main-color: #3B5661;
+@second-color: #DA881E;
+@dark-color: #222;
+
+/*Custom rules*/
+html, 
+body {
+	.w(100%); .h(100%);
+}
+
+* {
+	font-family: 'Open Sans';
+}
+
+.locations-list {
+	.m(0); .p(0);
+}
+
+.location-item {
+	.whiteFont; .font(14px);
+	.m(0); .p(10px 15px);
+	.semi-bold; .pointer;
+	list-style: none;
+	border-bottom: 1px solid white;
+	&:hover {
+		background: lighten(@dark-color, 10%);
+	}
+}
+
+.menu-header,
+.content-header {
+	background: @main-color;
+	.whiteFont; .semi-bold;
+	.p(15px); .h(18px);
+	
+}
+
+.content-body {
+	//.p(15px @im);
+}
+
+.lat-lng-info {
+	.font(13px); .semi-bold;
+}
+
+/*.current-location {
+	.absolute;
+	.l(15px); .t(65px);
+	z-index: 20;
+}*/
+
+.filter-cont {
+	.p(10px 15px);
+	background: @second-color;
+}
+
+.filter-input {
+	border: 1px solid #ccc @im;
+	.w(90%); .font(15px);
+	.p(3px 4%);
+}
+
+#map-canvas {
+	.w(100%); .h(100%);
+	position: absolute @im;
+}
+
+.active {
+	background: #DA881E @im;
+}
+
+.marker-image {
+	.w(70px); .h(70px);
+	.p(5px); .m(10px 0 0);
+	border: 1px solid #ccc;
+    
+}
+
+.loading {
+	.absolute;
+	left: 50%;
+	top: 50%;
+	.font(20px);
+	z-index: 99999;
+	.load-gif {
+		.w(40px); .h(40px);
+	}
+	&.hideLoading {
+		display: none;
+	}
+}

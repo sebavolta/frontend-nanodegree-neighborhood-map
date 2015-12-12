@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="plugins/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" Content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  </head>
+  <body id="body">
+    <div class="sb-slidebar sb-left menu-left"> 
+      <div class="menu-header">Select location</div>
+      <div class="filter-cont">
+        <input type="text" placeholder="Filter locations" data-bind="textInput: filterTxt, event: {keyup: filterMarkers}" class="filter-input">
+      </div>
+      <ul data-bind="foreach: filterLocation" class="locations-list">
+        <li data-bind="click: $parent.activateMe, css: { active: activated }" class="location-item"><span data-bind="text: title"></span></li>
+      </ul>
+    </div>
+    <div id="sb-site">
+      <div data-bind="css: { hideLoading: hideLoading }" class="loading"><img src="img/loading.gif" class="load-gif"></div>
+      <div class="content-header">
+        <button class="toggle-left">MENU</button>
+      </div>
+      <div class="content-body"><div id="map-canvas"></div></div>
+    </div>
+    <!--script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')-->
+    <script src="js/jquery-1-10-2.min.js"></script>
+    <!-- Slidebars-->
+    <script src="plugins/slidebars/slidebars.js"></script>
+    <!--Google Maps Api-->
+    <script src="https://maps.googleapis.com/maps/api/js" async></script>
+    <!--Knockout Framework-->
+    <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
+    <!--Utils	-->
+    <script type="text/javascript" src="js/utils.js"></script>
+    <!--App functionallity-->
+    <script type="text/javascript" src="js/app.min.js"></script>
+    <!--Google font-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  </body>
+</html>

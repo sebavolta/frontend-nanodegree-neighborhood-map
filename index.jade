@@ -1,0 +1,43 @@
+doctype html
+html
+	head
+		title
+		link(rel='stylesheet', type='text/css', href='plugins/slidebars/slidebars.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		meta(name="viewport" Content="width=device-width,initial-scale=1.0,maximum-scale=1.0")
+	body#body
+		.sb-slidebar.sb-left.menu-left 
+			.menu-header Select location
+			.filter-cont
+				input.filter-input(type="text" placeholder="Filter locations" data-bind="textInput: filterTxt, event: {keyup: filterMarkers}")
+			ul.locations-list(data-bind='foreach: filterLocation')
+				li.location-item(data-bind='click: $parent.activateMe, css: { active: activated }')
+					span(data-bind='text: title')
+		#sb-site
+			.loading(data-bind='css: { hideLoading: hideLoading }')
+				img.load-gif(src="img/loading.gif")
+			.content-header
+				button.toggle-left MENU
+			.content-body
+				<div id="map-canvas"></div>
+		
+		//script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+		script(src="js/jquery-1-10-2.min.js")
+		
+		// Slidebars
+		script(src='plugins/slidebars/slidebars.js')
+		
+		//Google Maps Api
+		script(src="https://maps.googleapis.com/maps/api/js" async)
+
+		//Knockout Framework
+		script(type='text/javascript', src='js/knockout-3.3.0.js')
+
+		//Utils	
+		script(type='text/javascript', src='js/utils.js')
+
+		//App functionallity
+		script(type='text/javascript', src='js/app.min.js')
+
+		//Google font
+		link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Open+Sans:400,600')

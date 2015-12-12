@@ -1,0 +1,181 @@
+/*Imports general css rules and less functions,
+i.e. you can use 'width: value' as '.w(value)*/
+.light {
+  font-weight: lighter !important;
+}
+.normal,
+.normal-font {
+  font-weight: normal !important;
+}
+.bold {
+  font-weight: bold !important;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.italic {
+  font-style: italic;
+}
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+.center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.whiteFont {
+  color: white !important;
+}
+.whiteBg {
+  background: white !important;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.clear {
+  clear: both;
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.full-width {
+  width: 100% !important;
+}
+.letter-spacing {
+  letter-spacing: -1px;
+}
+.no-decoration {
+  text-decoration: none !important;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.invisible {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.pointer {
+  cursor: pointer;
+}
+/*FONT SIZE*/
+/*LINE HEIGHT*/
+/*MARGIN*/
+/*PADDING*/
+/*WIDTH*/
+/*HEIGHT*/
+/*MIN-WIDTH*/
+/*MIN-HEIGHT*/
+/*MAX-WIDTH*/
+/*MAX-HEIGHT*/
+/*OVERFLOW*/
+/*TOP*/
+/*LEFT*/
+/*DISPLAY*/
+/*VARS*/
+/*Custom rules*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  font-family: 'Open Sans';
+}
+.locations-list {
+  margin: 0;
+  padding: 0;
+}
+.location-item {
+  color: white !important;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid white;
+}
+.location-item:hover {
+  background: #3c3c3c;
+}
+.menu-header,
+.content-header {
+  background: #3b5661;
+  color: white !important;
+  font-weight: 600;
+  padding: 15px;
+  height: 18px;
+}
+.lat-lng-info {
+  font-size: 13px;
+  font-weight: 600;
+}
+/*.current-location {
+	.absolute;
+	.l(15px); .t(65px);
+	z-index: 20;
+}*/
+.filter-cont {
+  padding: 10px 15px;
+  background: #da881e;
+}
+.filter-input {
+  border: 1px solid #cccccc !important;
+  width: 90%;
+  font-size: 15px;
+  padding: 3px 4%;
+}
+#map-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+}
+.active {
+  background: #da881e !important;
+}
+.marker-image {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin: 10px 0 0;
+  border: 1px solid #ccc;
+}
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 20px;
+  z-index: 99999;
+}
+.loading .load-gif {
+  width: 40px;
+  height: 40px;
+}
+.loading.hideLoading {
+  display: none;
+}
